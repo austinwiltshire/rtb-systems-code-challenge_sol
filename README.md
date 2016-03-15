@@ -54,16 +54,16 @@ Your code should be written in a systems language such as C, C++, Java or C# and
 2. Read requests from standard input (we're not asking you to
 implement a web server!). 
 3. Attempt to match each request with an ad.  
-    a. The size of the ad should match exactly.
-    b. At least one of the keywords match.
-    c. If a match is found, print out a string with the format
+    * The size of the ad should match exactly.
+    * At least one of the keywords match.
+    * If a match is found, print out a string with the format
          ```
 	 12345, 1.5
 	 ```
          where 12345 is the id of the matching ad and 1.5 is the
          bid value for the highest-valued matching keyword.
-    d. If no match is found, print out "0, 0.0"
-    e. Print one match per line of output
+    * If no match is found, print out "0, 0.0"
+    * Print one match per line of output
 
 You can use whatever external libraries that you see fit (so long as they are
 also available to us), and there no restrictions on the format of your code or
