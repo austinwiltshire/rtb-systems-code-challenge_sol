@@ -1,5 +1,4 @@
-The purpose of this challenge is to see how you solve problems while
-managing objectives that often seem contradictory.
+#Code Challenge
 
 Simpli.fi processes hundreds of thousands of requests every second in
 datacenters across the globe.  Because of this, we have to have a
@@ -14,7 +13,9 @@ contracts.
 For this challenge, we want you to implement a simplified version of
 our matching process.  We get bidding requests that look like:
 
+```
 http://simpli.fi/ck_bid?kw=mazda+cars&ad_size=320x250&ip=67.10.32.95&user_agent=Mozilla%2f5.0%20%28compatible%3b%20MSIE%209.0%3b%20Windows%20NT%206.0%3b%20Trident%2f5.0%29
+```
 
 Our matching process must determine, based on this ad request, if we
 have any ads for which it makes sense to serve at that moment to the
@@ -22,14 +23,15 @@ user who generated that request.
 
 There are three parts to this challenge.
 
-######################################################################
-#  Part I
+##Part I
 
 In the requests.log file attached, you'll find 10,000 bid requests of
 the form above.  In the ads.txt file, you'll find specifications for
 1,000 ads.  The format of the ad specification is
 
+```
 1234, 320, 250, 1.0, [mazda, 0.0, cars, 0.5, mazda3, 1.5]
+```
 
 where the first field is the ad id, the second field is the width of
 the ad in pixels, the third field is the height of the ad in pixels,
@@ -46,39 +48,42 @@ Each ad has a maximum bid amount.  If more than one ad matches, the one with
 the highest bid should be returned.  The request above has "mazda" and "cars"
 as keywords; the bid should be 1.0 because "mazda" has the default bid.
 
-Your code should be written in C++ and should
+Your code should be written in a systems language such as C, C++, Java or C# and should
 
-1) Load the ads from ads.txt
-2) Read requests from standard input (we're not asking you to
+1. Load the ads from ads.txt
+2. Read requests from standard input (we're not asking you to
 implement a web server!). 
-3) Attempt to match each request with an ad.  
-    a) The size of the ad should match exactly.
-    b) At least one of the keywords match.
-    c) If a match is found, print out a string with the format 
-          "12345, 1.5"
-       where 12345 is the id of the matching ad and 1.5 is the
-       bid value for the highest-valued matching keyword.
-    d) If no match is found, print out "0, 0.0"
-    e) Print one match per line of output
+3. Attempt to match each request with an ad.  
+    * The size of the ad should match exactly.
+    * At least one of the keywords match.
+    * If a match is found, print out a string with the format
+         ```
+	 12345, 1.5
+	 ```
+         where 12345 is the id of the matching ad and 1.5 is the
+         bid value for the highest-valued matching keyword.
+    * If no match is found, print out "0, 0.0"
+    * Print one match per line of output
 
 You can use whatever external libraries that you see fit (so long as they are
 also available to us), and there no restrictions on the format of your code or
-compilation except that it should be in C++ and we should be able to compile it
-and then run it by doing something like
+compilation except that it should be easy to compile (Make, CMake, Ant systems, etc..)
 
+```
 cat requests.log | ./your_program > output.txt
+```
 
-######################################################################
-# Part II
+## Part II
 
 We work with several exchanges, and each one sends us bid requests in
 a different format.  Using your code from Part I as a starting point, add
 the ability to handle requests that take the form
 
+```
 http://simpli.fi/kal_el?keywords=cars+mazda&ad_width=320&ad_height=250&user_ip=67.10.32.95&browser_agent=Mozilla%2f5.0%20%28compatible%3b%20MSIE%209.0%3b%20Windows%20NT%206.0%3b%20Trident%2f5.0%29
+```
 
-######################################################################
-# Part III
+## Part III
 
 Now suppose a client wants to serve an ad only to iPad users.  
 
