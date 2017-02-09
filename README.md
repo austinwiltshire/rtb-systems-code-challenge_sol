@@ -93,3 +93,20 @@ how you would handle this modification to the problem.  What
 assumptions have you made in your code to this point that would no
 longer be valid?  What would you change?  How would your changes
 impact performance?
+
+## Submission
+
+Please submit your code as a pull request against this repo.
+
+We're going to review this as a sample of your professional work, thus 
+please include all tests, tooling and documentation you'd normally
+produce for professional level work. We'll be reviewing all artifacts
+for readability, maintainability, design and correctness. In other words,
+unlike other code challenges, there's no 'trick' we're looking for here.
+
+We just want your best example of your own good, solid, code.
+
+Finally, ammend this README with build instructions as well as test
+and design documentation as needed.
+
+
