@@ -56,10 +56,7 @@ implement a web server!).
 3. Attempt to match each request with an ad.  
     * The size of the ad should match exactly.
     * At least one of the keywords match.
-    * If a match is found, print out a string with the format
-         ```
-	 12345, 1.5
-	 ```
+    * If a match is found, print out a string with the format `12345, 1.5`
          where 12345 is the id of the matching ad and 1.5 is the
          bid value for the highest-valued matching keyword.
     * If no match is found, print out "0, 0.0"
