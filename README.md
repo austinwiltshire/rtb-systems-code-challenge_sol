@@ -23,7 +23,7 @@ user who generated that request.
 
 There are three parts to this challenge.
 
-##Part I
+## Part I
 
 In the requests.log file attached, you'll find 10,000 bid requests of
 the form above.  In the ads.txt file, you'll find specifications for
