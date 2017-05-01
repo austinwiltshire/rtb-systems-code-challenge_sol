@@ -106,4 +106,13 @@ We just want your best example of your own good, solid, code.
 Finally, ammend this README with build instructions as well as test
 and design documentation as needed.
 
+# Solution
 
+I implemented the solution in Java as a Maven project. You can build the project using Maven build system in e.g. Eclipse or directly use the already compiled jar file in /target folder.
+
+## Part III Solution
+
+To only show the ad for iPad users, we need to find if the request is coming from an iPad. This can be performed by searching the ```user_agent``` 
+or 
+```browser_agent``` 
+parameter of the request for the keyword 'iPad'. In my solution, it can be implemented in the Util.processRequest method where I parse the request to get the parameters. In this method, I can also check if the request is coming from an iPad user and if it is, process the request. Otherwise, I can just return null as the response. The performance impact is minimal, because I already have the request and all of its parameters and I just need to lookup the parameter and search for iPad keyword.  
